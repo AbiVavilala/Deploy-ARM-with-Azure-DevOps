@@ -117,34 +117,34 @@ now we will add trigger to the release pipeline. this will make sure any changes
 
 I will enable continoys deployment on the pipleline. when I make change to the repo the pipeline will get executed and resource will be created. Edit the release pipeline
 
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/ER1.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/ER1.png)
 
 click on the trigger that will let me enable continous deployment
 
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/ER2.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/ER2.png)
 
 enable create a new release when new build is available and enable pull trigger
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/ER3.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/ER3.png)
 
 Now save the settings. We have enabled continous deployment. 
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/ER4.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/ER4.png)
 
 Now we will edit the repo. I will add more resources in the template. I will add storage account, public ip, Virtual network, subnet, NSG, NIC, Disk and Virtual machine.
 
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/addresources.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/addresources.png)
 
 commit the changes and you will see new bulild will be created and that will trigger release pipeline.
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/newbuild.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/newbuild.png)
 
 new release will trigger too.
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/newrelease.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/newrelease.png)
 
 new release will run and once it's successful resource will be created.
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/newreleasesucess.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/newreleasesucess.png)
 
 I will check in Azure and all the resources are created.
 
-![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/newresourcecreated.png)
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/newresourcecreated.png)
 
 This is how you can deploy ARM template with Azure Devops. you can enabel contionus deployment to make sure when you add resource to the template they get created.
 
