@@ -77,6 +77,44 @@ pipeline has run succesfully.
 this pipeline has produced an atrifact. we will use this artifact to create resources mentioned in our template. In our ARM template we are creating a storage account.
 
 
+let's create a release pipeline and use artifact we got from our build process.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipeline.png)
+
+for the release pipeline let's select empty job. 
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/emptyjob.png)
+
+
+now let's add ARM template to the task
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/addarmtemplate.png)
+
+let's fill in the details so that resource get's created.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipeline1.png)
+
+we need to integrate our build into the release pipeline. the artifact generated will be added.
+
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipeline2.png)
+
+I added artifact generated into the release pipeline.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipeline3.png)
+
+now let's add task into the arm template added.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipeline4.png)
+
+let's create the release.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/createrelease.png)
+
+
+you can see that resource group is created and storage account is created. please see the logs image below.
+
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/releasepipelinesuccess.png)
+
+I checked in Azure that new resource group is created and storage account is created.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/resourcecreated.png)
+
+
+
+
+
 
 
 
