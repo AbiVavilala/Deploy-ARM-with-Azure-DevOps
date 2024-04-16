@@ -14,7 +14,55 @@ You have an Azure DevOps organization. If you don't have one, create one for fre
 
  You need to import your gitHub  repo to Azure Repos.
 
- 
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/Importrepo.png)
+
 You have an ARM template that defines the infrastructure for your project. I have ARM tepmate in the repo. the template will create storage account. Virtual Network, Public IP, NSG, subnet, NIC, VM.
 
 ## Create Pipeline
+
+I will add new pipeline
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/createpipeline.png)
+
+I will specify my code is stored in Azure Repos git.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/pipelinerepo.png)
+
+select the repo we just imported to Azure Repos Git in this project and then select starter pipeline.
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/starterpipeline.png)
+
+add two tasks to the pipeline. first one is copying files and second one is publish artifact. please find the code below.
+
+```
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(agent.builddirectory)'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'storagedrop'
+    publishLocation: 'Container'
+```
+
+
+
