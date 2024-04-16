@@ -10,9 +10,11 @@ In This project we have ARM template and Azure DevOps organization ready for cre
 
 You have an Azure DevOps organization. If you don't have one, create one for free. If your team already has an Azure DevOps organization, make sure you're an administrator of the Azure DevOps project that you want to use.
 
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/ProjectPic.png)
 
-You've configured a service connection to your Azure subscription. The tasks in the pipeline execute under the identity of the service principal. For steps to create the connection, see Create a DevOps project.
+ You need to import your gitHub  repo to Azure Repos.
 
+ 
 You have an ARM template that defines the infrastructure for your project. I have ARM tepmate in the repo. the template will create storage account. Virtual Network, Public IP, NSG, subnet, NIC, VM.
 
 ## Create Pipeline
