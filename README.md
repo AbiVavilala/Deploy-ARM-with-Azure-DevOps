@@ -63,6 +63,21 @@ steps:
     ArtifactName: 'storagedrop'
     publishLocation: 'Container'
 ```
+now lets review the pipeline before we run
+
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/Reviewpipeline.png)
+
+now lets save and run the pipleline
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/saveandrunpipeline.png)
+
+pipeline has run succesfully.
+
+![](https://github.com/AbiVavilala/Deploy-ARM-with-Azure-DevOps/blob/main/images/pipelinerunsucess.png)
+
+this pipeline has produced an atrifact. we will use this artifact to create resources mentioned in our template. In our ARM template we are creating a storage account.
+
+
+
 
 
 
